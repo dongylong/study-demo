@@ -1,4 +1,4 @@
-package com.study.jvm;
+package com.noriental.jvm;
 
 public class ClassLoader {
 

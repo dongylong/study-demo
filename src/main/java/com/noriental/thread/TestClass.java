@@ -1,4 +1,4 @@
-package com.demo;
+package com.noriental.thread;
 
 import org.junit.Test;
 

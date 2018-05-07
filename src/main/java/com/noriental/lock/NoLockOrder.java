@@ -1,4 +1,4 @@
-package com.study.lock;
+package com.noriental.lock;
 
 import java.util.concurrent.CountDownLatch;
 
