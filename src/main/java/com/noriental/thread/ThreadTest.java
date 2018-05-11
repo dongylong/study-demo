@@ -42,8 +42,8 @@ public class ThreadTest {
 
     @Test
     public void semaphoreTest() {
-        //Semaphore是计数信号量
-        Semaphore semaphore = new Semaphore(5);
+        //Semaphore是计数信号量 控制同一时间只有3个线程运行
+        Semaphore semaphore = new Semaphore(3);
         semaphore.tryAcquire();
     }
 

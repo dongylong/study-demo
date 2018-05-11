@@ -1,6 +1,5 @@
 package com.web.action;
 
-import com.sun.tools.javac.tree.JCTree;
 import org.apache.tomcat.util.buf.CharChunk;
 import org.apache.tomcat.util.buf.MessageBytes;
 import org.junit.Test;
@@ -62,11 +61,11 @@ public class HttpDemoTest {
             }
         }
     }
-
-    public JCTree.JCExpression qualident() {
-
-        return null;
-    }
+// import com.sun.tools.javac.tree.JCTree;
+//    public JCTree.JCExpression qualident() {
+//
+//        return null;
+//    }
 
     @Test
     public void typeTest(int srcId) {

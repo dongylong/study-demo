@@ -20,7 +20,7 @@ import java.util.concurrent.Executors;
 public class TestClass {
 
     @Test
-    public void exchagerTest() {
+    public void exchageTest() {
         final Exchanger<List<Integer>> exchanger = new Exchanger<>();
         new Thread(() -> {
             List<Integer> l = new ArrayList<>(2);
@@ -72,15 +72,10 @@ public class TestClass {
 
     @Test
     public void test() {
-//        new Thread(() -> add("key1")).start();
-//        new Thread(() -> add("key1")).start();
-//        new Thread(() -> add("key1")).start();
-
         ExecutorService executorService = Executors.newFixedThreadPool(5);
         for (int i = 0; i < 5; i++) {
             Thread thread = new Thread(
                     () -> {
-//                        add1("key1", Thread.currentThread());
                         add("key1", Thread.currentThread());
                     }
             );
@@ -88,12 +83,4 @@ public class TestClass {
         }
     }
 
-    @Test
-    public void typeTest(){
-        double dble = Math.random();
-        BigDecimal bigDecimal = BigDecimal.valueOf(0.5432877);
-        System.out.println(bigDecimal);
-        BigDecimal l = bigDecimal.setScale(6, RoundingMode.DOWN);
-        System.out.println(l);
-    }
 }

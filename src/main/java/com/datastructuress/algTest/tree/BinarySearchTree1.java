@@ -37,7 +37,7 @@ public class BinarySearchTree1 {
         cmp = c;
     }
 
-    private int myCOmpare(Integer lhs, Integer rhs) {
+    private int myCompare(Integer lhs, Integer rhs) {
         if (cmp != null) {
             return cmp.compare(lhs, rhs);
         } else {
@@ -49,7 +49,7 @@ public class BinarySearchTree1 {
         if (t == null) {
             return false;
         }
-        int compareResult = myCOmpare(x, t.element);
+        int compareResult = myCompare(x, t.element);
         if (compareResult < 0) {
             return contains(compareResult, t.left);
         } else if (compareResult > 0) {

@@ -9,8 +9,8 @@ public class Node {
     private static final int ORDER = 4;
     private int numItems;
     private Node parent;
-    private Node childArray[] = new Node[ORDER];
-    private DataItem itemArray[] = new DataItem[ORDER - 1];
+    private Node[] childArray = new Node[ORDER];
+    private DataItem[] itemArray = new DataItem[ORDER - 1];
 
     public void connectChild(int childNum, Node child) {
         childArray[childNum] = child;
@@ -67,8 +67,8 @@ public class Node {
             if (itemArray[j] == null) {
                 continue;
             } else {
-                long itskey = itemArray[j].dData;
-                if (newKey < itskey) {
+                long itemkey = itemArray[j].dData;
+                if (newKey < itemkey) {
                     itemArray[j + 1] = itemArray[j];
                 } else {
                     itemArray[j + 1] = newItem;

@@ -1,6 +1,6 @@
 package com.datastructuress.algTest;
 
-import com.datastructuress.alg.AlgDemo;
+import com.datastructuress.alg.QuickSort;
 import org.junit.Test;
 
 import java.util.Queue;
@@ -66,8 +66,8 @@ public class AlgTest {
 
     @Test
     public void QuickSortTest() {
-        AlgDemo algDemo = new AlgDemo();
-        algDemo.quickSort(0, n, a);
+        QuickSort quickSort = new QuickSort();
+        quickSort.quickSort(0, n, a);
     }
 
 //    @After

@@ -12,7 +12,7 @@ import java.util.TreeMap;
  */
 public class TreeMapAndTreeSet {
 
-    public static Map<String, List<String>> compueAdjacentWords(List<String> theWords) {
+    public static Map<String, List<String>> computeAdjacentWords(List<String> theWords) {
         //89000words 4sec
         Map<String, List<String>> adjWords = new TreeMap<>();
         Map<Integer, List<String>> wordsByLength = new TreeMap<>();
