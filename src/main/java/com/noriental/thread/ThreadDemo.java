@@ -8,9 +8,7 @@ import utils.PausableThreadPool;
 import java.lang.invoke.MethodHandles;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -24,6 +22,8 @@ public class ThreadDemo {
 
     Lock lock = new ReentrantLock();
 
+    public static void main(String[] args) {
+    }
 //    @Test
 //    public void futureTaskTest() throws ExecutionException, InterruptedException, TimeoutException {
 //
@@ -43,7 +43,6 @@ public class ThreadDemo {
 //        return "ss";
 //    }
 
-    @Test
     public void threadPool() {
         int cpuCore = Runtime.getRuntime().availableProcessors();
         PausableThreadPool threadPool = new PausableThreadPool(

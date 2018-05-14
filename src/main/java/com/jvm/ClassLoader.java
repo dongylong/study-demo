@@ -1,4 +1,4 @@
-package com.noriental.jvm;
+package com.jvm;
 
 /**
  * @author dongyl

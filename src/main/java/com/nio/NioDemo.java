@@ -1,5 +1,6 @@
-package com.web.action;
+package com.nio;
 
+import com.sun.tools.javac.tree.JCTree;
 import org.apache.tomcat.util.buf.CharChunk;
 import org.apache.tomcat.util.buf.MessageBytes;
 import org.junit.Test;
@@ -20,14 +21,13 @@ import java.util.Set;
  * @date 11:29 2/23/18
  * @project study-demo
  */
-public class HttpDemoTest {
+public class NioDemo {
 
     protected void convertURI(MessageBytes uri) {
         CharChunk charChunk = uri.getCharChunk();
 
     }
 
-    @Test
     public void socketTest() throws IOException {
         ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
         Selector selector = Selector.open();
@@ -61,13 +61,11 @@ public class HttpDemoTest {
             }
         }
     }
-// import com.sun.tools.javac.tree.JCTree;
-//    public JCTree.JCExpression qualident() {
-//
-//        return null;
-//    }
 
-    @Test
+    public JCTree.JCExpression qualident() {
+        return null;
+    }
+
     public void typeTest(int srcId) {
 //        int srcId = 0;
         if (srcId == 1) {
@@ -75,8 +73,7 @@ public class HttpDemoTest {
         }
     }
 
-    @Test
-    public void readerTest() {
+    public void readerDemo() {
         try {
             StringBuffer stringBuffer = new StringBuffer();
             char[] buf = new char[1024];
