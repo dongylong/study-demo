@@ -1,7 +1,5 @@
 package com.noriental.thread;
 
-import org.junit.Test;
-
 import java.io.File;
 import java.io.FileFilter;
 import java.util.concurrent.*;

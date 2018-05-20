@@ -1,7 +1,5 @@
 package com.noriental.thread;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,7 +15,6 @@ import java.util.concurrent.Executors;
  */
 public class TestClass {
 
-    @Test
     public void exchageTest() {
         final Exchanger<List<Integer>> exchanger = new Exchanger<>();
         new Thread(() -> {
@@ -68,7 +65,6 @@ public class TestClass {
 
     }
 
-    @Test
     public void test() {
         ExecutorService executorService = Executors.newFixedThreadPool(5);
         for (int i = 0; i < 5; i++) {

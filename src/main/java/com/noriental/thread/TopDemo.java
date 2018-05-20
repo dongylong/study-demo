@@ -1,7 +1,5 @@
 package com.noriental.thread;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +10,6 @@ import java.util.List;
  */
 public class TopDemo {
 
-    @Test
     public void gcTest() throws InterruptedException {
         System.out.println("ready");
         Thread.sleep(10000);
