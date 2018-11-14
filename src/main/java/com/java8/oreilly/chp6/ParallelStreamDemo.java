@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.IntStream;
 
-public class parallelStreamDemo {
+public class ParallelStreamDemo {
     /**
      * 6.1
      *
@@ -59,5 +59,14 @@ public class parallelStreamDemo {
                         .collect(groupingBy(side -> side
                                 //使用summingDouble方法完成这一步。
                                 , summingDouble(n -> fraction)));
+    }
+
+    /**
+     * 并行求和
+     * @param values
+     * @return
+     */
+    private int addIntegers(List<Integer> values){
+        return values.parallelStream().mapToInt(i->i).sum();
     }
 }
