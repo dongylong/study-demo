@@ -1,5 +1,7 @@
 package com.noriental.thread;
 
+import org.junit.Test;
+
 import java.io.File;
 import java.io.FileFilter;
 import java.util.concurrent.*;
@@ -18,6 +20,41 @@ public class ThreadTest {
             new LinkedBlockingQueue<>(),
             new ThreadPoolExecutor.DiscardOldestPolicy());
 
+    @Test
+    public void ttt() throws InterruptedException {
+        for(int i =0 ;i <5 ;i++){
+            test1();
+        }
+    }
+    private void test1()  throws InterruptedException {
+        Thread thread1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                System.out.println("1");
+            }
+        });
+        Thread thread2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                System.out.println("2");
+            }
+        });
+        thread1.start();
+        thread2.start();
+        thread2.join(0L);
+        System.out.println("hello world");
+    }
+    @Test
+    public void test(){
+       int  number=0;
+        for (int m=0;m<=100;m+=5)
+        {
+            number+=(m+2)/2;
+        }
+        System.out.println(number);
+    }
     @Test
     public void futureTaskTest() {
         FutureTask<String> newTask = new FutureTask<>(() -> {

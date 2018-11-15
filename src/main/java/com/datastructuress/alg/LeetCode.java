@@ -1,6 +1,5 @@
 package com.datastructuress.alg;
 
-import org.junit.Test;
 
 /**
  * @author dongyl
@@ -9,7 +8,6 @@ import org.junit.Test;
  */
 public class LeetCode {
 
-    @Test
     public void test() {
         int[] aa = new int[]{1, 2, 2, 3, 3, 3};
         int i = singleNumber(aa, aa.length);

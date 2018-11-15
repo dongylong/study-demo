@@ -16,7 +16,7 @@ public class OrderAtomicServiceImpl extends OrderAtomicService {
 
     public static void main(String[] args) {
 
-        jedis.getResource();
-        jedis.incr();
+//        jedis.getResource();
+//        jedis.incr();
     }
 }

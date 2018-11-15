@@ -1,6 +1,5 @@
 package com.spring.aop.service;
 
-import com.spring.aop.annotation.Action;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,6 +9,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class DemoMethodService {
-    public void add(){}
+    public void add(){
+        System.out.println("DemoMethodService.add");
+    }
 
 }

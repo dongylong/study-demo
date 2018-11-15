@@ -1,9 +1,9 @@
-package com.datastructuress.algTest;
+package com.alg;
 
 import com.datastructuress.alg.QuickSort;
 import org.junit.Test;
 
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 
 /**
@@ -15,6 +15,23 @@ public class AlgTest {
     private int[] a = new int[]{6, 3, 7, 9, 4, 8, 2, 5, 1};
     private int n = a.length - 1;
 
+    @Test
+    public void t() {
+        Map<String,String> hashMap =new HashMap<>();
+        hashMap.put("123","234");
+        hashMap.put("123","246");
+        Set<Map.Entry<String, String>> entries = hashMap.entrySet();
+        for (Map.Entry<String, String> entry : entries) {
+            String content = entry.getValue();
+            System.out.println(content);
+        }
+        Iterator<Map.Entry<String, String>> xx = entries.iterator();
+        while (xx.hasNext()){
+            Map.Entry<String, String> aa = xx.next();
+            System.out.println(aa.getValue());
+            System.out.println(xx);
+        }
+    }
 
     @Test
     public void floorTest() {
@@ -38,7 +55,7 @@ public class AlgTest {
     @Test
     public void primeNumber() {
         for (int i = 4; i < 2001; i += 2) {
-            for (int n = 2; n < i/2; n++) {
+            for (int n = 2; n < i / 2; n++) {
                 if (prime(n)) {
                     if (prime(i - n)) {
                         System.out.println("i: " + i + " n: " + n + " + " + (i - n));
@@ -48,8 +65,9 @@ public class AlgTest {
             }
         }
     }
+
     private boolean prime(int i) {
-        if (i <=1) {
+        if (i <= 1) {
             return false;
         }
         if (i == 2) {
@@ -97,7 +115,8 @@ public class AlgTest {
         }
         System.out.println(queue);
     }
-//    @Test
+
+    //    @Test
 //    public void QuickSortTestBak() {
 //        int[] a = new int[]{6, 3, 7, 9, 4, 8, 2, 5, 1};
 //        int i = 1;
@@ -123,4 +142,43 @@ public class AlgTest {
 //        quickSort(0,j-1);
 //        quickSort(j+1,a.length-1);
 //    }
+    @Test
+    public void sentinelLinearSearchTest() {
+        int[] A = new int[]{1, 2, 3, 4, 5};
+        int n = 0;
+        int x = 3;
+        x = sentinelLinearSearch(A, n, x);
+        System.out.println(x);
+    }
+
+    private int sentinelLinearSearch(int[] A, int n, int x) {
+        int AAA = n;
+
+        for (int i = 0; i < n; i++) {
+            if (A[i] == n) {
+                x = A[n];
+            }
+        }
+        return x;
+    }
+
+    @Test
+    public void test() {
+        int x = testTryFinally();
+        System.out.println(x);
+        List<Integer> list1 = new ArrayList<>();
+        list1.contains("1");
+    }
+
+    private int testTryFinally() {
+        int i = 1;
+        try {
+            int b = i++;
+            System.out.println("b:" + b);
+            return b;
+        } finally {
+            System.out.println("i:" + i);
+            return i;
+        }
+    }
 }

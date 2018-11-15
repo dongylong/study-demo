@@ -1,7 +1,5 @@
 package com.datastructuress.algTest.hash;
 
-import org.junit.Test;
-
 /**
  * @author dongyl
  * @date 18:39 12/28/17
@@ -9,7 +7,6 @@ import org.junit.Test;
  */
 public class HashDouble {
 
-    @Test
     public  void test() {
         HashTable hashTable = new HashTable(5);
         DataItem item = new DataItem(5);

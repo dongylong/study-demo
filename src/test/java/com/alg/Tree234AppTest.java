@@ -1,5 +1,6 @@
-package com.datastructuress.alg.chp10;
+package com.alg;
 
+import com.datastructuress.alg.chp10.Tree234;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,5 +1,6 @@
-package com.bigdata.hbase;
+package com.bigdata.hadoop;
 
+import com.bigdata.hbase.HBaseService;
 import org.apache.hadoop.hbase.client.*;
 import org.junit.Before;
 import org.junit.Test;

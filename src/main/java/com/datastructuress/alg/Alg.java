@@ -1,14 +1,11 @@
 package com.datastructuress.alg;
 
-import org.junit.Test;
-
 /**
  * @author dongyl
  * @date 16:58 12/21/17
  * @project encourage-svr
  */
 public class Alg {
-    @Test
     public void bigNumberAlg() {
         long fNum = 123456789;
         long fNumLen = String.valueOf(fNum).length();
@@ -52,7 +49,6 @@ public class Alg {
 //        System.out.println("sNumHLen : " + sNumHLen + ", sNumLLen :" + sNumLLen);
     }
 
-    @Test
     public void bigNumber() {
         long a = 123456789;
         long b = 123456789;

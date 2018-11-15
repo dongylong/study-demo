@@ -2,7 +2,6 @@ package com.spring.aop;
 
 import com.spring.aop.annotation.Action;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -17,32 +16,47 @@ import java.lang.reflect.Method;
  * @date 14:12 5/15/18
  * @project study-demo
  */
-//声明一个切面
+
+/**
+ * 声明一个切面
+ */
 @Aspect
-//让此切面成为Spring容器管理的Bean
+/**
+ * 让此切面成为Spring容器管理的Bean
+ */
 @Component
 public class LogAspect {
 
-    //注解声明切点
+    /**
+     * 注解声明切点
+     */
     @Pointcut("@annotation(com.spring.aop.annotation.Action)")
-    public void annotationPorinCut(){
+    public void annotationPorinCut() {
 
     }
 
-    //注解声明一个建言，并使用@Pointcut定义的切点
+    /**
+     * 注解声明一个建言，并使用@Pointcut定义的切点
+     *
+     * @param joinPoint
+     */
     @After("annotationPorinCut()")
-    public void after(JoinPoint joinPoint){
+    public void after(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         Action action = method.getAnnotation(Action.class);
-        System.out.println("actionName = " +action.name());
+        System.out.println("actionName = " + action.name());
     }
 
-    //注解声明一个建言，此建言直接使用
+    /**
+     * 注解声明一个建言，此建言直接使用
+     *
+     * @param joinPoint
+     */
     @Before("execution(* com.spring.aop.service.DemoMethodService.*(..))")
-    public void before(JoinPoint joinPoint){
+    public void before(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
-        System.out.println("method = " +method.getName());
+        System.out.println("method = " + method.getName());
     }
 }

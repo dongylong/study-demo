@@ -1,4 +1,4 @@
-package com.bigdata.spark;
+package com.bigdata.hadoop;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.SparkContext;

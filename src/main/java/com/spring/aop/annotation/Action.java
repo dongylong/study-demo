@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  * @project study-demo
  */
 
-@Target(ElementType.METHOD)//
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Action {

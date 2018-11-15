@@ -1,7 +1,5 @@
 package com.datastructuress.uitil;
 
-import org.junit.Test;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -32,7 +30,7 @@ public class DataTypeUtil {
     }
 
     public static double doubleDiv(double v1, double v2) {
-        return doubleDiv(v1,v2,DEF_DIV_SCALE);
+        return doubleDiv(v1, v2, DEF_DIV_SCALE);
     }
 
     public static double doubleDiv(double v1, double v2, int scale) {
@@ -57,11 +55,11 @@ public class DataTypeUtil {
     public static void main(String[] args) {
         double dble1 = Math.random();
         double dble2 = Math.random();
-        System.out.println("dble1 :" +dble1);
-        System.out.println("dble2 :" +dble2);
+        System.out.println("dble1 :" + dble1);
+        System.out.println("dble2 :" + dble2);
         double xx = doubleDiv(dble1, dble2);
-        System.out.println("dble1 / dble2 :" +dble1 / dble2);
-        System.out.println("xx :" +xx);
+        System.out.println("dble1 / dble2 :" + dble1 / dble2);
+        System.out.println("xx :" + xx);
 
     }
 
