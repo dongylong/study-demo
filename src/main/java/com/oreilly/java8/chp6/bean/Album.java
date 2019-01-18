@@ -1,4 +1,4 @@
-package com.java8.oreilly.chp6.bean;
+package com.oreilly.java8.chp6.bean;
 
 public class Album {
     private String  tracks;

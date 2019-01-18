@@ -1,4 +1,4 @@
-package com.java8.oreilly.chp6;
+package com.oreilly.java8.chp6;
 
 import java.util.ArrayList;
 import java.util.List;
