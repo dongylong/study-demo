@@ -1,6 +1,7 @@
 package com.oreilly.headfirst.design.chp1.behavior;
 
 import com.oreilly.headfirst.design.chp1.bean.Duck;
+import com.oreilly.headfirst.design.chp1.bean.MallardDuck;
 
 /**
  * @AUTHOR liuling
@@ -12,5 +13,6 @@ public class MiniDuckSimulator {
         Duck millard = new MallardDuck();
         millard.performQuark();
         millard.performFly();
+        millard.display();
     }
 }
