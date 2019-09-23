@@ -7,7 +7,7 @@ import com.oreilly.headfirst.design.chp4.bean.PizzaTypeEnum;
  * @DATE 2019/1/26 10:22
  * @PROJECT studydemo
  **/
-public class NYPizzaStore extends PizzaStore{
+public class ChicagoStylePizzaStore extends PizzaStore{
 
     @Override
     Pizza createPizza(String type) {
@@ -15,16 +15,16 @@ public class NYPizzaStore extends PizzaStore{
         Pizza pizza = null;
         switch (pizzaTypeEnum){
             case CHEESE:
-                pizza = new NYStyleCheesePizza();
+                pizza = new ChicagoStyleCheesePizza();
                 break;
             case PEPPERPNI:
-                pizza = new NYStylePepperpniPizza();
+                pizza = new ChicagoStylePepperpniPizza();
                 break;
             case CLAM:
-                pizza = new NYStyleClamPizza();
+                pizza = new ChicagoStyleClamPizza();
                 break;
             case VEGGIE:
-                pizza = new NYStyleVeggiePizza();
+                pizza = new ChicagoStyleVeggiePizza();
                 break;
             default:
                 break;

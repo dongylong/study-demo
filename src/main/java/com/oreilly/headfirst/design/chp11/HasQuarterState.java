@@ -1,6 +1,6 @@
 package com.oreilly.headfirst.design.chp11;
 
-import com.oreilly.headfirst.design.chp11.bean.GumBallMachine;
+import com.oreilly.headfirst.design.chp10.bean.GumBallMachine;
 
 import java.util.Random;
 

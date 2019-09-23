@@ -2,6 +2,8 @@ package com.oreilly.headfirst.design.chp4.factory;
 
 import com.oreilly.headfirst.design.chp4.bean.*;
 
+import java.util.ArrayList;
+
 /**
  * @AUTHOR liuling
  * @DATE 2019/1/26 09:00
@@ -11,18 +13,23 @@ public abstract class Pizza {
     String name;
     Dough dough;
     Sauce sauce;
+    ArrayList toppings = new ArrayList();
     Veggies[] veggies;
     Cheese cheese;
     Pepperoni pepperoni;
     Clams clams;
+
     abstract void prepare();
-    void bake(){
+
+    void bake() {
         System.out.println("Bake for 25 minutes at 350");
     }
-    void cun(){
-        System.out.println("cutting the piza into diagonal slices");
+
+    void cut() {
+        System.out.println("cutting the pizza into diagonal slices");
     }
-    void box(){
+
+    void box() {
         System.out.println("place pizza in official pizzastore box");
     }
 
