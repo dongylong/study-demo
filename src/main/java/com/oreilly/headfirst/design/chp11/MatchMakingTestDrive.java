@@ -45,6 +45,7 @@ public class MatchMakingTestDrive {
 
     private PersonService getPersonFromDataBase(String person) {
         PersonService personService  = new PersonServiceImpl();
+        return personService;
     }
 
     PersonService getOwnerProxy(PersonService personService){

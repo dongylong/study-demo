@@ -16,8 +16,8 @@ public class RemoteControl {
     Command[] offCommands;
 
     public RemoteControl() {
-        onCommands = new Command(7);
-        offCommands = new Command(7);
+        onCommands =new Command[7];
+        offCommands =new Command[7];
         Command noCommand = new NoCommand();
         for (int i = 0; i < 7; i++) {
             onCommands[i] = noCommand;
@@ -41,7 +41,7 @@ public class RemoteControl {
     @Override
     public String toString() {
         StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append("---------remote control---------\n")
+        stringBuffer.append("---------remote control---------\n");
         for (int i = 0; i < onCommands.length; i++) {
             stringBuffer.append("[slot ")
                     .append(i)
