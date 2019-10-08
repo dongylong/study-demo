@@ -1,4 +1,4 @@
-package com.algorithms.chp2;
+package com.study.algorithms.chp2;
 
 /**
  * @author dongyl
