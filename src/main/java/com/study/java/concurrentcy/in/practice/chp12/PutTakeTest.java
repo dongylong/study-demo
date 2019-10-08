@@ -60,7 +60,7 @@ public class PutTakeTest {
                 for (int i = nPairs; i >0 ; --i) {
                     bb.put(seed);
                     sum+=seed;
-                    seed = xorShift(seed);
+//                    seed = xorShift(seed);
                 }
                 putSum.getAndAdd(sum);
                 barrier.wait();
