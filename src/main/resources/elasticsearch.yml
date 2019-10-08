@@ -1,0 +1,15 @@
+node:
+  master: false
+  voting_only: false
+  data: false
+  ingest: false
+  ml: false
+cluster:
+  name: secilog
+  remote:
+    connect: false
+client:
+  transport:
+    ignore_cluster_name: true #true 忽略连接节点时的集群名称验证
+    ping_timeout: 5 #等待一个节点的ping响应时间 。默认5秒
+    nodes_sampler_interval: 5 #监听和连接节点的频率 时间间隔 默认5
