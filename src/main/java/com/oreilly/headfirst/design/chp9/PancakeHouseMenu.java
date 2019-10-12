@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * @author dongyl
@@ -32,5 +33,10 @@ public class PancakeHouseMenu {
 
     public ArrayList getMenuItems() {
         return menuItems;
+    }
+
+
+    public Iterator createIterator() {
+        return new PancakeHouseMenuIterator(menuItems);
     }
 }

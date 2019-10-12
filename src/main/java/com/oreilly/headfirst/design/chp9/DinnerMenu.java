@@ -1,10 +1,6 @@
 package com.oreilly.headfirst.design.chp9;
 
-import jdk.nashorn.internal.objects.annotations.Constructor;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * @author dongyl
@@ -40,5 +36,9 @@ public class DinnerMenu {
 
     public MenuItem[] getMenuItems() {
         return menuItems;
+    }
+
+    public Iterator createIterator() {
+        return new DinnerMenuIterator(menuItems);
     }
 }
