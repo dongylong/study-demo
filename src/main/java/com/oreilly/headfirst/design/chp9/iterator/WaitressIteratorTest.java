@@ -1,6 +1,4 @@
-package com.oreilly.headfirst.design.chp9;
-
-import java.util.Iterator;
+package com.oreilly.headfirst.design.chp9.iterator;
 
 /**
  * @author dongyl
@@ -16,7 +14,8 @@ public class WaitressIteratorTest {
     public static void main(String[] args) {
         PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
         DinnerMenu dinnerMenu = new DinnerMenu();
-        WaitressIterator waitress = new WaitressIterator(pancakeHouseMenu,dinnerMenu);
+        CafeMenu cafeMenu = new CafeMenu();
+        WaitressIterator waitress = new WaitressIterator(pancakeHouseMenu,dinnerMenu,cafeMenu);
         waitress.printMenu();
     }
 }

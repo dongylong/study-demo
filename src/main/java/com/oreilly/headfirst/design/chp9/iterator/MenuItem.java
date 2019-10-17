@@ -1,4 +1,4 @@
-package com.oreilly.headfirst.design.chp9;
+package com.oreilly.headfirst.design.chp9.iterator;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

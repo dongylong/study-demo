@@ -1,6 +1,5 @@
-package com.oreilly.headfirst.design.chp9;
+package com.oreilly.headfirst.design.chp9.iterator;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
@@ -16,6 +15,7 @@ public class WaitressIterator {
 
     Menu pancakeHouseMenu;
     Menu dinnerMenu;
+    Menu cafeMenu;
 
 //    PancakeHouseMenu pancakeHouseMenu;
 //    DinnerMenu dinnerMenu;
@@ -25,20 +25,29 @@ public class WaitressIterator {
 //        this.dinnerMenu = dinnerMenu;
 //    }
     //改成接口 针对接口编程 而不是具体实现类
-    public WaitressIterator(Menu pancakeHouseMenu, Menu dinnerMenu) {
+    public WaitressIterator(Menu pancakeHouseMenu, Menu dinnerMenu, Menu
+            cafeMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinnerMenu = dinnerMenu;
+        this.cafeMenu = cafeMenu;
     }
+
 
     void printMenu() {
         printBreakfastMenuIterator();
         printLunchMenuIterator();
+        printCafeMenuIterator();
 
     }
     void printBreakfastMenuIterator() {
         Iterator pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
         System.out.println("----pancakeHouse-----");
         printMenu(pancakeHouseMenuIterator);
+    }
+    void printCafeMenuIterator() {
+        Iterator cafeMenuIterator = cafeMenu.createIterator();
+        System.out.println("----cafeMenuIterator-----");
+        printMenu(cafeMenuIterator);
     }
     void printLunchMenuIterator() {
         Iterator dinnerMenuIterator= dinnerMenu.createIterator();

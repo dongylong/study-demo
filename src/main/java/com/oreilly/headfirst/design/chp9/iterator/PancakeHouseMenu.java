@@ -1,7 +1,4 @@
-package com.oreilly.headfirst.design.chp9;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
+package com.oreilly.headfirst.design.chp9.iterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -15,7 +12,7 @@ import java.util.Iterator;
  * @created 2019/10/8 09:43
  * @changeRecord
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu  implements Menu {
     ArrayList menuItems;
 
     public PancakeHouseMenu() {
@@ -35,8 +32,9 @@ public class PancakeHouseMenu {
         return menuItems;
     }
 
-
+    @Override
     public Iterator createIterator() {
-        return new PancakeHouseMenuIterator(menuItems);
+//        return new PancakeHouseMenuIterator(menuItems);
+        return menuItems.iterator();
     }
 }
