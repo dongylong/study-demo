@@ -1,5 +1,7 @@
 package com.oreilly.headfirst.design.chp9.component;
 
+import java.util.Iterator;
+
 /**
  * @author dongyl
  * @version 1.0
@@ -39,6 +41,10 @@ public abstract class MenuComponent {
     }
 
     public void print() {
+        throw new UnsupportedOperationException();
+    }
+
+    public Iterator createIterator(){
         throw new UnsupportedOperationException();
     }
 }

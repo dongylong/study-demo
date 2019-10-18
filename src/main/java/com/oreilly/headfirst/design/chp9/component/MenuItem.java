@@ -2,6 +2,9 @@ package com.oreilly.headfirst.design.chp9.component;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.util.CompositeIterator;
+
+import java.util.Iterator;
 
 /**
  * @author dongyl
@@ -53,5 +56,10 @@ public class MenuItem extends MenuComponent{
         }
         System.out.println(" , " + getPrice());
         System.out.println(" --" + getDescription());
+    }
+
+    @Override
+    public Iterator createIterator(){
+        return new NullIterator();
     }
 }
