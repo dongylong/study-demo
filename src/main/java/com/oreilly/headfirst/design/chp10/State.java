@@ -10,5 +10,4 @@ public interface State {
     void ejectQuarter();
     void turnCrank();
     void dispense();
-
 }
