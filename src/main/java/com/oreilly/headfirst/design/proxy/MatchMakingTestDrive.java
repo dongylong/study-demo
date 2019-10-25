@@ -1,9 +1,9 @@
-package com.oreilly.headfirst.design.chp11;
+package com.oreilly.headfirst.design.proxy;
 
-import com.oreilly.headfirst.design.chp11.handler.NonOwnerInvocationHandler;
-import com.oreilly.headfirst.design.chp11.handler.OwnerInvocationHandler;
-import com.oreilly.headfirst.design.chp11.service.PersonService;
-import com.oreilly.headfirst.design.chp11.service.impl.PersonServiceImpl;
+import com.oreilly.headfirst.design.proxy.handler.NonOwnerInvocationHandler;
+import com.oreilly.headfirst.design.proxy.handler.OwnerInvocationHandler;
+import com.oreilly.headfirst.design.proxy.service.PersonService;
+import com.oreilly.headfirst.design.proxy.service.impl.PersonServiceImpl;
 
 import java.lang.reflect.Proxy;
 

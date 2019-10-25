@@ -1,7 +1,7 @@
 package com.oreilly.headfirst.design.chp10.bean;
 
 
-import com.oreilly.headfirst.design.chp11.GumBallMachineRemote;
+import com.oreilly.headfirst.design.proxy.GumBallMachineRemote;
 
 /**
  * @author dongyl

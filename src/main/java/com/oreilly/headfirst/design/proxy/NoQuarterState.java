@@ -1,4 +1,4 @@
-package com.oreilly.headfirst.design.chp11;
+package com.oreilly.headfirst.design.proxy;
 
 
 import com.oreilly.headfirst.design.chp10.bean.GumBallMachine;
@@ -9,7 +9,7 @@ import com.oreilly.headfirst.design.chp10.bean.GumBallMachine;
  * @project study-demo
  */
 public class NoQuarterState implements State {
-    GumBallMachine gumBallMachine;
+    transient GumBallMachine gumBallMachine;
 
     public NoQuarterState(GumBallMachine gumBallMachine) {
         this.gumBallMachine = gumBallMachine;

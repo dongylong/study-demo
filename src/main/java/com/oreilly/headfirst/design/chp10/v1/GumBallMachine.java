@@ -1,6 +1,6 @@
 package com.oreilly.headfirst.design.chp10.v1;
 
-import com.oreilly.headfirst.design.chp11.GumBallMachineRemote;
+import com.oreilly.headfirst.design.proxy.GumBallMachineRemote;
 
 /**
  * @author dongyl

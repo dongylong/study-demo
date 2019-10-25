@@ -1,6 +1,6 @@
-package com.oreilly.headfirst.design.chp11.service.impl;
+package com.oreilly.headfirst.design.proxy.service.impl;
 
-import com.oreilly.headfirst.design.chp11.service.PersonService;
+import com.oreilly.headfirst.design.proxy.service.PersonService;
 
 /**
  * @author dongyl

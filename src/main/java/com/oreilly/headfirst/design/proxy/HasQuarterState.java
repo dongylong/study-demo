@@ -1,4 +1,4 @@
-package com.oreilly.headfirst.design.chp11;
+package com.oreilly.headfirst.design.proxy;
 
 import com.oreilly.headfirst.design.chp10.bean.GumBallMachine;
 

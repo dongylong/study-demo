@@ -1,4 +1,4 @@
-package com.oreilly.headfirst.design.chp11.service;
+package com.oreilly.headfirst.design.proxy.service;
 
 /**
  * @author dongyl
@@ -11,7 +11,6 @@ public interface PersonService {
     String getGender();
     String getInterests();
     int getHotOrNotRating();
-
     void setName(String name);
     void setGender(String gender);
     void setInterests(String interests);

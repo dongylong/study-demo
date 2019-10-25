@@ -1,6 +1,6 @@
-package com.oreilly.headfirst.design.chp11.handler;
+package com.oreilly.headfirst.design.proxy.handler;
 
-import com.oreilly.headfirst.design.chp11.service.PersonService;
+import com.oreilly.headfirst.design.proxy.service.PersonService;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;

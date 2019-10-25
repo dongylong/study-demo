@@ -1,7 +1,9 @@
-package com.oreilly.headfirst.design.chp11;
+package com.oreilly.headfirst.design.proxy;
 
 
 import com.oreilly.headfirst.design.chp10.bean.GumBallMachine;
+
+import java.rmi.Naming;
 
 /**
  * @author dongyl
@@ -15,16 +17,20 @@ public class GumballMachineTestDrive {
                 "127.0.0.1/gumballmachine",
                 ""
         };
+        GumballMonitor[] monitor = new GumballMonitor[location.length];
+
         for (int i = 0; i < location.length; i++) {
             try {
-                GumBallMachineRemote remote = new GumBallMachineRemote();
+                GumBallMachineRemote remote = (GumBallMachineRemote) Naming.lookup(location[i]);//new GumBallMachineRemote();
                 GumBallMachine gumBallMachine = new GumBallMachine(remote);
-                GumballMonitor monitor = new GumballMonitor(gumBallMachine);
-                monitor.report();
-            }catch (Exception e){
+                monitor[i] = new GumballMonitor(remote);
+                System.out.println(monitor[i]);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-
+        for (int i = 0; i < location.length; i++) {
+            monitor[i].report();
+        }
     }
 }
