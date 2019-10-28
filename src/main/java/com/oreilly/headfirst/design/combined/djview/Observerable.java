@@ -6,9 +6,13 @@ package com.oreilly.headfirst.design.combined.djview;
  * @title
  * @description
  * @company 好未来-爱智康
- * @created 2019/10/25 10:02
+ * @created 2019/10/28 09:17
  * @changeRecord
  */
-public interface Quackable extends QuackObservable {
-    public void quack();
+public class Observerable {
+    public void registerObserver(Observer observer) {
+    }
+
+    public void registerObserver() {
+    }
 }

@@ -6,9 +6,13 @@ package com.oreilly.headfirst.design.combined.djview;
  * @title
  * @description
  * @company 好未来-爱智康
- * @created 2019/10/25 10:02
+ * @created 2019/10/25 12:26
  * @changeRecord
  */
-public interface Quackable extends QuackObservable {
-    public void quack();
+public class DuckCall implements Quackable {
+    @Override
+    public void quack() {
+        System.out.println("Quark");
+    }
+    
 }
