@@ -9,7 +9,7 @@ package com.oreilly.headfirst.design.combined.djview;
  * @created 2019/10/28 09:18
  * @changeRecord
  */
-public class Quacklogist implements Observer {
+public class Quackologist implements Observer {
     @Override
     public void update(QuackObservable duck) {
         System.out.println("Quackologist" + duck + "just quacked");

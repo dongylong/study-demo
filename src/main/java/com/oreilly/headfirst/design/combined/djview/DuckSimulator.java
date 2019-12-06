@@ -11,12 +11,14 @@ package com.oreilly.headfirst.design.combined.djview;
  */
 public class DuckSimulator {
     public static void main(String[] args) {
-
         DuckSimulator simulator = new DuckSimulator();
         AbstractDuckFactory duckFactory = new CountingDuckFactory();
         simulator.simulate(duckFactory);
     }
+    private void simulateWithObserver(AbstractDuckFactory duckFactory) {
 
+
+    }
     private void simulate(AbstractDuckFactory duckFactory) {
         Quackable mallardDuck = duckFactory.createMallardDuck();
         Quackable redheadDuck = duckFactory.createRedheadDuck();
@@ -42,6 +44,13 @@ public class DuckSimulator {
         flockOfMallards.add(millardFour);
         flocks.add(flockOfMallards);
 
+        System.out.println("Duck simulator with observer");
+        Quackologist quackologist = new Quackologist();
+
+        Quackable flockOfDucks = new MallardDuck();
+        flockOfDucks.registerObserver(quackologist);
+        simulate(flockOfDucks);
+        System.out.println("duck quacked "+QuackCounter.getQuacks() +" times");
 
         simulate(flocks);
         simulate(flockOfMallards);
