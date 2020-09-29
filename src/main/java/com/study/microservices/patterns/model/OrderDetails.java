@@ -1,5 +1,9 @@
 package com.study.microservices.patterns.model;
 
+import com.study.microservices.patterns.controller.BillInfo;
+import com.study.microservices.patterns.controller.DeliveryInfo;
+import com.study.microservices.patterns.controller.OrderInfo;
+import com.study.microservices.patterns.controller.TicketInfo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,4 +26,8 @@ public class OrderDetails {
     private Long restaurantId;
     private Long orderId;
     private OrderLineItems lineItems;
+
+    public static OrderDetails makeOrderDetails(OrderInfo orderInfo, TicketInfo ticketInfo, DeliveryInfo deliveryInfo, BillInfo billInfo) {
+        return null;
+    }
 }

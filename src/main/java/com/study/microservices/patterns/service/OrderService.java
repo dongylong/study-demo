@@ -1,5 +1,6 @@
 package com.study.microservices.patterns.service;
 
+import com.study.microservices.patterns.controller.OrderInfo;
 import com.study.microservices.patterns.model.Order;
 import com.study.microservices.patterns.model.OrderDetails;
 import com.study.microservices.patterns.model.OrderRepository;
@@ -36,5 +37,9 @@ public class OrderService {
         CreateOrderSagaState data = new CreateOrderSagaState(order.getId(),orderDetails);
         createOrderSagaManager.create(data,Order.class,order.getId());
         return order;
+    }
+
+    public OrderInfo findOrderById(String orderId) {
+        return null;
     }
 }

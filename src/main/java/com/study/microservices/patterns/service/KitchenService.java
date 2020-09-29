@@ -1,5 +1,6 @@
 package com.study.microservices.patterns.service;
 
+import com.study.microservices.patterns.controller.TicketInfo;
 import com.study.microservices.patterns.model.Ticket;
 import com.study.microservices.patterns.model.TicketDomainEvent;
 
@@ -29,5 +30,9 @@ public class KitchenService {
         Ticket ticket = ticketRepository.findById(ticketId).orElseThrow(() -> new RuntimeException(ticketId + ""));
         List<TicketDomainEvent> events = ticket.accept(readyBy);
         domainEventPublisher.publish(ticket,events);
+    }
+
+    public TicketInfo findTicketByOrderId(String orderId) {
+        return null;
     }
 }

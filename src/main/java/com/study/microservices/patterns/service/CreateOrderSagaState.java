@@ -28,6 +28,10 @@ public class CreateOrderSagaState {
     private OrderDetails orderDetails;
     private long ticketId;
 
+    public CreateOrderSagaState(Long id, OrderDetails orderDetails) {
+
+    }
+
 
     CreateTicket makeCreateTicketCommand() {
         return new CreateTicket(getOrderDetails().getRestaurantId(),getOrderId(),makeTicketDetails(getOrderDetails()));
